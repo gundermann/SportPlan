@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">ExercisePlan</string>
+    <string name="action_settings">Settings</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="movement">Bewegung</string>
+    <string name="technique">Technik</string>
+    <string name="initinal_pose">Grundstellung</string>
+
+</resources>
