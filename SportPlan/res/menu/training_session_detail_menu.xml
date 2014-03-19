@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android" >
+    <item
+        android:id="@+id/close_training_session"
+        android:title="@string/close_training_session"
+        android:icon="@android:drawable/ic_menu_crop"
+        android:showAsAction="ifRoom"
+        />
+    
+   	<item 
+   	    android:id="@+id/open_list_of_members"
+   	    android:title="@string/list_of_members"
+   	    android:icon="@drawable/ic_launcher"
+   	    android:showAsAction="ifRoom"
+   	    />
+
+</menu>

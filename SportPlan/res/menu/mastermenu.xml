@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android" >
+    <item 
+        android:id="@+id/add_new_workout"
+        android:showAsAction="ifRoom"
+        android:icon="@android:drawable/ic_menu_add"
+        android:title="@string/add_new_workout"/>
+    <item android:id="@+id/add_trainig_target"
+        android:showAsAction="ifRoom"
+        android:icon="@drawable/ic_launcher"
+        android:title="@string/add_training_target"></item>
+</menu>

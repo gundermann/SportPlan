@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">SportPlan</string>
+    <string name="title_item_detail">Item Detail</string>
+    <string name="add_training_target">Trainingsplan anlegen</string>
+    <string name="add_new_workout">Neue Trainingseinheit planen</string>
+    <string name="list_of_members">Anwesenheitsliste</string>
+    <string name="close_training_session">Trainingseinheit abschließen</string>
+    <string name="title_training_session_detail">Trainingseinheit</string>
+    <string name="add_member">Teilnehmer hinzufügen</string>
+    <string name="save">Speichern</string>
+
+</resources>
