@@ -4,12 +4,14 @@
     android:layout_height="match_parent"
     android:orientation="horizontal" >
 
-    <CheckBox android:id="@+id/member_check" />
+    <CheckBox android:id="@+id/member_check" 
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"/>
 
     <TextView
         android:id="@+id/member_name"
         style="?android:attr/textAppearanceLarge"
-        android:layout_width="match_parent"
+        android:layout_width="wrap_content"
         android:layout_height="match_parent" />
 
 </LinearLayout>
