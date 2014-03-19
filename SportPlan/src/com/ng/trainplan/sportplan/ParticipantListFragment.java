@@ -15,7 +15,7 @@ import com.ng.trainplan.sportplan.bussines.MasterListItem;
  * contained in a {@link ItemListActivity} in two-pane mode (on tablets) or a
  * {@link ItemDetailActivity} on handsets.
  */
-public class MemberListFragment extends Fragment {
+public class ParticipantListFragment extends Fragment {
 	/**
 	 * The fragment argument representing the item ID that this fragment
 	 * represents.
@@ -33,7 +33,7 @@ public class MemberListFragment extends Fragment {
 	 * Mandatory empty constructor for the fragment manager to instantiate the
 	 * fragment (e.g. upon screen orientation changes).
 	 */
-	public MemberListFragment() {
+	public ParticipantListFragment() {
 	}
 
 	@Override

@@ -29,7 +29,6 @@ public class MemberCheckAdapter extends ArrayAdapter<String> implements OnClickL
 	public View getView(final int position, View convertView, ViewGroup parent) {
 		LayoutInflater inflater = (LayoutInflater) context
 				.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
-
 		View rowView = inflater.inflate(R.layout.member_list, parent,
 				false);
 		CheckBox checkBox = (CheckBox) rowView.findViewById(R.id.member_check);

@@ -12,5 +12,6 @@
     <string name="save">Speichern</string>
     <string name="title_member_overview">Mitgliederliste</string>
     <string name="title_member_list">Teilnehmerliste</string>
+    <string name="PersonNameHint">Name</string>
 
 </resources>

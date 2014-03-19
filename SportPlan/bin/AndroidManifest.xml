@@ -40,7 +40,7 @@
                 android:value=".ItemListActivity" />
         </activity>
         <activity
-            android:name="com.ng.trainplan.sportplan.MemberListActivity"
+            android:name="com.ng.trainplan.sportplan.ParticipantListActivity"
             android:label="@string/title_member_list"
             android:parentActivityName=".ItemListActivity" >
             <meta-data
@@ -50,7 +50,7 @@
         <activity
             android:name="com.ng.trainplan.sportplan.MemberOverviewActivity"
             android:label="@string/title_member_overview"
-            android:parentActivityName=".MemberListActivity" >
+            android:parentActivityName=".ParticipantListActivity" >
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value=".MemberListActivity" />

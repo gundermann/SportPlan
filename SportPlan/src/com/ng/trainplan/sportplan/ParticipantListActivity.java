@@ -8,9 +8,9 @@ import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 
-public class MemberListActivity extends FragmentActivity {
+public class ParticipantListActivity extends FragmentActivity {
 
-	private static final String TAG = MemberListActivity.class.getSimpleName();
+	private static final String TAG = ParticipantListActivity.class.getSimpleName();
 	
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -22,7 +22,7 @@ public class MemberListActivity extends FragmentActivity {
 			Bundle arguments = new Bundle();
 			arguments.putString(ItemDetailFragment.ARG_ITEM_ID, getIntent()
 					.getStringExtra(ItemDetailFragment.ARG_ITEM_ID));
-			MemberListFragment fragment = new MemberListFragment();
+			ParticipantListFragment fragment = new ParticipantListFragment();
 			fragment.setArguments(arguments);
 			getSupportFragmentManager().beginTransaction()
 					.add(R.id.item_detail_container, fragment).commit();

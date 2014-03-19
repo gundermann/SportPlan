@@ -1,5 +1,7 @@
 package com.ng.trainplan.sportplan;
 
+import com.ng.trainplan.sportplan.business.Person;
+
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v4.app.FragmentActivity;
@@ -8,7 +10,7 @@ import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 
-public class MemberOverviewActivity extends FragmentActivity {
+public class MemberOverviewActivity extends FragmentActivity implements PersonSetupListener {
 
 	private static final String TAG = MemberOverviewActivity.class.getSimpleName();
 	private MemberOverviewFragment fragment;
@@ -45,15 +47,26 @@ public class MemberOverviewActivity extends FragmentActivity {
 		switch (item.getItemId()) {
 		case android.R.id.home:
 			app.setupParticipiants(fragment.getCheckedMembers());
-			Intent intent = new Intent(this, MemberListActivity.class);
+			Intent intent = new Intent(this, ParticipantListActivity.class);
 			intent.putExtra(ItemDetailFragment.ARG_ITEM_ID, getIntent()
 					.getStringExtra(ItemDetailFragment.ARG_ITEM_ID));
 			NavUtils.navigateUpTo(this,
 					intent );
 			return true;
 		case R.id.add_member:
+			NewPersonDialog.newInstance(this).show(getSupportFragmentManager(), TAG);
 			return true;
 		}
 		return super.onOptionsItemSelected(item);
+	}
+
+	@Override
+	public void doFinishPersonSetup() {
+		//do nothing
+	}
+
+	@Override
+	public void updatePerson(Person person) {
+		app.addToDefaultMemberList(person.toString());
 	}
 }

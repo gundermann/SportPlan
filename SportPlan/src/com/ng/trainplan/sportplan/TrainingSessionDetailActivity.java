@@ -60,7 +60,7 @@ public class TrainingSessionDetailActivity extends FragmentActivity {
 			return true;
 		case R.id.open_list_of_members:
 			Intent detailIntent;
-			detailIntent = new Intent(this, MemberListActivity.class);
+			detailIntent = new Intent(this, ParticipantListActivity.class);
 			detailIntent.putExtra(ItemDetailFragment.ARG_ITEM_ID, getIntent()
 					.getStringExtra(ItemDetailFragment.ARG_ITEM_ID));
 			startActivity(detailIntent);
