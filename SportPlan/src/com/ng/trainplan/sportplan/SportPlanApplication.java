@@ -44,7 +44,7 @@ public class SportPlanApplication extends Application {
  		return memberList;
 	}
 
-	private List<String> getDefaultMember() {
+	public List<String> getDefaultMember() {
 		List<String> member = new ArrayList<String>();
 		member.add("Nick Gundermann");
 		member.add("Daniel Schwenn");

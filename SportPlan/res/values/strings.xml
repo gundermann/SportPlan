@@ -10,5 +10,7 @@
     <string name="title_training_session_detail">Trainingseinheit</string>
     <string name="add_member">Teilnehmer hinzufügen</string>
     <string name="save">Speichern</string>
+    <string name="title_member_overview">Mitgliederliste</string>
+    <string name="title_member_list">Teilnehmerliste</string>
 
 </resources>

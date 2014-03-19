@@ -41,11 +41,19 @@
         </activity>
         <activity
             android:name="com.ng.trainplan.sportplan.MemberListActivity"
-            android:label="@string/title_training_session_detail"
+            android:label="@string/title_member_list"
             android:parentActivityName=".ItemListActivity" >
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value=".ItemListActivity" />
+        </activity>
+        <activity
+            android:name="com.ng.trainplan.sportplan.MemberOverviewActivity"
+            android:label="@string/title_member_overview"
+            android:parentActivityName=".MemberListActivity" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".MemberListActivity" />
         </activity>
     </application>
 
