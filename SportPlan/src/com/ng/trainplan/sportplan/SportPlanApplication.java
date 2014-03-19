@@ -40,8 +40,7 @@ public class SportPlanApplication extends Application {
 	}
 
 	public List<String> getActualMemberList() {
-		List<String> memberList = getActualTrainingSession().getMember();
- 		return memberList;
+		return getActualTrainingSession().getMember();
 	}
 
 	public List<String> getDefaultMember() {
@@ -50,6 +49,12 @@ public class SportPlanApplication extends Application {
 		member.add("Daniel Schwenn");
 		
 		return member;
+	}
+
+	public void setupParticipiants(List<String> checkedMembers) {
+		for(String participiant : checkedMembers){
+			getActualTrainingSession().addParticipiant(participiant);
+		}
 	}
 
 }

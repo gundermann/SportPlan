@@ -1,13 +1,14 @@
 package com.ng.trainplan.sportplan;
 
+import java.util.ArrayList;
+import java.util.List;
+
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ListView;
-
-import com.ng.trainplan.sportplan.bussines.MasterListItem;
 
 /**
  * A fragment representing a single Item detail screen. This fragment is either
@@ -22,10 +23,6 @@ public class MemberOverviewFragment extends Fragment {
 	public static final String ARG_ITEM_ID = "item_id";
 
 	private SportPlanApplication app;
-	/**
-	 * The dummy content this fragment is presenting.
-	 */
-	private MasterListItem mItem;
 	private ListView memberListView;
 
 	/**
@@ -39,10 +36,6 @@ public class MemberOverviewFragment extends Fragment {
 	public void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		app = (SportPlanApplication) getActivity().getApplication();
-		if (getArguments().containsKey(ARG_ITEM_ID)) {
-			mItem = app.getMasterListItemById(getArguments().getString(
-					ARG_ITEM_ID));
-		}
 	}
 
 	@Override
@@ -54,5 +47,9 @@ public class MemberOverviewFragment extends Fragment {
 		memberListView.setAdapter(new MemberCheckAdapter(getActivity(), app
 				.getDefaultMember()));
 		return rootView;
+	}
+
+	public List<String> getCheckedMembers() {
+		return ((MemberCheckAdapter)memberListView.getAdapter()).getCheckedMember();
 	}
 }

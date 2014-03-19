@@ -11,26 +11,14 @@ import android.view.MenuItem;
 public class MemberListActivity extends FragmentActivity {
 
 	private static final String TAG = MemberListActivity.class.getSimpleName();
-
+	
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_member_list);
 		/** Show the Up button in the action bar. */
 		getActionBar().setDisplayHomeAsUpEnabled(true);
-
-		// savedInstanceState is non-null when there is fragment state
-		// saved from previous configurations of this activity
-		// (e.g. when rotating the screen from portrait to landscape).
-		// In this case, the fragment will automatically be re-added
-		// to its container so we don't need to manually add it.
-		// For more information, see the Fragments API guide at:
-		//
-		// http://developer.android.com/guide/components/fragments.html
-		//
 		if (savedInstanceState == null) {
-			// Create the detail fragment and add it to the activity
-			// using a fragment transaction.
 			Bundle arguments = new Bundle();
 			arguments.putString(ItemDetailFragment.ARG_ITEM_ID, getIntent()
 					.getStringExtra(ItemDetailFragment.ARG_ITEM_ID));
@@ -40,7 +28,7 @@ public class MemberListActivity extends FragmentActivity {
 					.add(R.id.item_detail_container, fragment).commit();
 		}
 	}
-
+	
 	@Override
 	public boolean onCreateOptionsMenu(Menu menu) {
 		Log.i("init menu", TAG);
@@ -52,7 +40,6 @@ public class MemberListActivity extends FragmentActivity {
 	public boolean onOptionsItemSelected(MenuItem item) {
 		switch (item.getItemId()) {
 		case android.R.id.home:
-			// TODO set extras on all, except Detail
 			Intent intent = new Intent(this,
 					TrainingSessionDetailActivity.class);
 			intent.putExtra(ItemDetailFragment.ARG_ITEM_ID, getIntent()

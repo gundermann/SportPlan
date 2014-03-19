@@ -45,6 +45,19 @@ public class MemberListFragment extends Fragment {
 					ARG_ITEM_ID));
 		}
 	}
+	
+	@Override
+	public void onResume() {
+		super.onResume();
+		updateList();
+	}
+
+	private void updateList() {
+		memberListView
+		.setAdapter(new ArrayAdapter<String>(getActivity(),
+				android.R.layout.simple_list_item_1, app
+						.getActualMemberList()));		
+	}
 
 	@Override
 	public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -52,10 +65,7 @@ public class MemberListFragment extends Fragment {
 		View rootView = inflater.inflate(R.layout.fragment_member_list,
 				container, false);
 		memberListView = (ListView) rootView.findViewById(R.id.member_list);
-		memberListView
-				.setAdapter(new ArrayAdapter<String>(getActivity(),
-						android.R.layout.simple_list_item_1, app
-								.getActualMemberList()));
+		updateList();
 		return rootView;
 	}
 }
