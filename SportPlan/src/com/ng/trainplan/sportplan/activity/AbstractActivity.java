@@ -1,11 +1,10 @@
 package com.ng.trainplan.sportplan.activity;
 
-import com.ng.trainplan.sportplan.SportPlanApplication;
-import com.ng.trainplan.sportplan.activity.fragment.AbstractFragment;
-
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentActivity;
+
+import com.ng.trainplan.sportplan.SportPlanApplication;
 
 public abstract class AbstractActivity extends FragmentActivity {
 

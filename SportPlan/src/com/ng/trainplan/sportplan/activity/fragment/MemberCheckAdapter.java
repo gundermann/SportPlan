@@ -3,10 +3,6 @@ package com.ng.trainplan.sportplan.activity.fragment;
 import java.util.ArrayList;
 import java.util.List;
 
-import com.ng.trainplan.sportplan.R;
-import com.ng.trainplan.sportplan.R.id;
-import com.ng.trainplan.sportplan.R.layout;
-
 import android.content.Context;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -16,6 +12,8 @@ import android.widget.ArrayAdapter;
 import android.widget.CheckBox;
 import android.widget.LinearLayout;
 import android.widget.TextView;
+
+import com.ng.trainplan.sportplan.R;
 
 public class MemberCheckAdapter extends ArrayAdapter<String> implements OnClickListener {
 

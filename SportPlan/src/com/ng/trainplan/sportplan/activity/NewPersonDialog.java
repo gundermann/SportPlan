@@ -8,8 +8,6 @@ import android.view.View;
 import android.widget.EditText;
 
 import com.ng.trainplan.sportplan.R;
-import com.ng.trainplan.sportplan.R.id;
-import com.ng.trainplan.sportplan.R.layout;
 import com.ng.trainplan.sportplan.business.CancelDialogListener;
 import com.ng.trainplan.sportplan.business.Person;
 import com.ng.trainplan.sportplan.business.PersonSetupListener;
