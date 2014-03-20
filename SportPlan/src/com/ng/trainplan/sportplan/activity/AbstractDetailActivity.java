@@ -4,6 +4,7 @@ import com.ng.trainplan.sportplan.activity.fragment.AbstractFragment;
 import com.ng.trainplan.sportplan.activity.fragment.ItemDetailFragment;
 
 import android.os.Bundle;
+import android.support.v4.app.Fragment;
 
 /**
  * An activity representing a single Item detail screen. This activity is only
@@ -34,8 +35,8 @@ public abstract class AbstractDetailActivity extends AbstractActivity {
 			// Create the detail fragment and add it to the activity
 			// using a fragment transaction.
 			Bundle arguments = new Bundle();
-			arguments.putString(ItemDetailFragment.ARG_ITEM_ID, getIntent()
-					.getStringExtra(ItemDetailFragment.ARG_ITEM_ID));
+			arguments.putString(AbstractFragment.ARG_ITEM_ID, getIntent()
+					.getStringExtra(AbstractFragment.ARG_ITEM_ID));
 			fragment = getSpecificFragment();
 			fragment.setArguments(arguments);
 			getSupportFragmentManager().beginTransaction()
@@ -45,7 +46,7 @@ public abstract class AbstractDetailActivity extends AbstractActivity {
 
 	protected abstract int getDetailContainer();
 
-	protected abstract AbstractFragment getSpecificFragment();
+	protected abstract Fragment getSpecificFragment();
 
 	protected abstract int getContentView();
 }

@@ -1,6 +1,7 @@
 package com.ng.trainplan.sportplan.activity;
 
 import android.content.Intent;
+import android.support.v4.app.Fragment;
 import android.support.v4.app.NavUtils;
 import android.util.Log;
 import android.view.Menu;
@@ -9,10 +10,6 @@ import android.view.MenuItem;
 import com.ng.trainplan.sportplan.NewPersonDialog;
 import com.ng.trainplan.sportplan.PersonSetupListener;
 import com.ng.trainplan.sportplan.R;
-import com.ng.trainplan.sportplan.R.id;
-import com.ng.trainplan.sportplan.R.layout;
-import com.ng.trainplan.sportplan.R.menu;
-import com.ng.trainplan.sportplan.activity.fragment.AbstractFragment;
 import com.ng.trainplan.sportplan.activity.fragment.ItemDetailFragment;
 import com.ng.trainplan.sportplan.activity.fragment.MemberOverviewFragment;
 import com.ng.trainplan.sportplan.business.Person;
@@ -65,7 +62,7 @@ public class MemberOverviewActivity extends AbstractDetailActivity implements Pe
 	}
 
 	@Override
-	protected AbstractFragment getSpecificFragment() {
+	protected Fragment getSpecificFragment() {
 		return new MemberOverviewFragment();
 	}
 }

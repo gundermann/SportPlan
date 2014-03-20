@@ -9,9 +9,6 @@ import android.view.MenuItem;
 
 import com.ng.trainplan.sportplan.R;
 import com.ng.trainplan.sportplan.SportPlanApplication;
-import com.ng.trainplan.sportplan.R.id;
-import com.ng.trainplan.sportplan.R.layout;
-import com.ng.trainplan.sportplan.R.menu;
 import com.ng.trainplan.sportplan.activity.fragment.ItemDetailFragment;
 import com.ng.trainplan.sportplan.activity.fragment.ItemListFragment;
 import com.ng.trainplan.sportplan.activity.fragment.TrainingSessionDetailFragment;

@@ -4,12 +4,13 @@ import com.ng.trainplan.sportplan.SportPlanApplication;
 import com.ng.trainplan.sportplan.activity.fragment.AbstractFragment;
 
 import android.os.Bundle;
+import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentActivity;
 
 public abstract class AbstractActivity extends FragmentActivity {
 
 	protected static String TAG;
-	protected AbstractFragment fragment;
+	protected Fragment fragment;
 	protected SportPlanApplication app;
 	
 	@Override
