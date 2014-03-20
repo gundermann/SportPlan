@@ -1,5 +1,11 @@
-package com.ng.trainplan.sportplan;
+package com.ng.trainplan.sportplan.activity.fragment;
 
+import com.ng.trainplan.sportplan.R;
+import com.ng.trainplan.sportplan.SportPlanApplication;
+import com.ng.trainplan.sportplan.R.id;
+import com.ng.trainplan.sportplan.R.layout;
+import com.ng.trainplan.sportplan.activity.ItemDetailActivity;
+import com.ng.trainplan.sportplan.activity.ItemListActivity;
 import com.ng.trainplan.sportplan.bussines.MasterListItem;
 
 import android.os.Bundle;

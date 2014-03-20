@@ -9,13 +9,13 @@
         android:targetSdkVersion="14" />
 
     <application
-        android:allowBackup="true"
         android:name="com.ng.trainplan.sportplan.SportPlanApplication"
+        android:allowBackup="true"
         android:icon="@drawable/ic_launcher"
         android:label="@string/app_name"
         android:theme="@style/AppTheme" >
         <activity
-            android:name="com.ng.trainplan.sportplan.ItemListActivity"
+            android:name="com.ng.trainplan.sportplan.activity.ItemListActivity"
             android:label="@string/app_name" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -24,31 +24,30 @@
             </intent-filter>
         </activity>
         <activity
-            android:name="com.ng.trainplan.sportplan.ItemDetailActivity"
+            android:name="com.ng.trainplan.sportplan.activity.ItemDetailActivity"
             android:label="@string/title_item_detail"
-            android:parentActivityName=".ItemListActivity" >
+            android:parentActivityName="com.ng.trainplan.sportplan.activity.ItemListActivity" >
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value=".ItemListActivity" />
         </activity>
-         <activity
-            android:name="com.ng.trainplan.sportplan.TrainingSessionDetailActivity"
+        <activity
+            android:name="com.ng.trainplan.sportplan.activity.TrainingSessionDetailActivity"
             android:label="@string/title_training_session_detail"
-            android:parentActivityName=".ItemListActivity" >
+            android:parentActivityName="com.ng.trainplan.sportplan.activity.ItemListActivity" >
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value=".ItemListActivity" />
+                android:value="com.ng.trainplan.sportplan.activity.ItemListActivity." />
         </activity>
         <activity
-            android:name="com.ng.trainplan.sportplan.ParticipantListActivity"
+            android:name="com.ng.trainplan.sportplan.activity.MemberOverviewActivity"
             android:label="@string/title_member_list"
-            android:parentActivityName=".ItemListActivity" >
-            <meta-data
-                android:name="android.support.PARENT_ACTIVITY"
+            android:parentActivityName="com.ng.trainplan.sportplan.activity.ItemListActivity" >
+            <meta-data android:name="android.support.PARENT_ACTIVITY"
                 android:value=".ItemListActivity" />
         </activity>
         <activity
-            android:name="com.ng.trainplan.sportplan.MemberOverviewActivity"
+            android:name="com.ng.trainplan.sportplan.activity.ParticipantListActivity"
             android:label="@string/title_member_overview"
             android:parentActivityName=".ParticipantListActivity" >
             <meta-data

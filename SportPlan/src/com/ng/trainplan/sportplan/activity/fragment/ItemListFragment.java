@@ -1,5 +1,6 @@
-package com.ng.trainplan.sportplan;
+package com.ng.trainplan.sportplan.activity.fragment;
 
+import com.ng.trainplan.sportplan.SportPlanApplication;
 import com.ng.trainplan.sportplan.bussines.MasterListCallbacks;
 import com.ng.trainplan.sportplan.bussines.MasterListItem;
 

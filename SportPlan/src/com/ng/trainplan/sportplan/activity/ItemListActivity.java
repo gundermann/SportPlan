@@ -1,22 +1,28 @@
-package com.ng.trainplan.sportplan;
+package com.ng.trainplan.sportplan.activity;
 
+import android.content.Intent;
+import android.os.Bundle;
+import android.support.v4.app.Fragment;
+import android.util.Log;
+import android.view.Menu;
+import android.view.MenuItem;
+
+import com.ng.trainplan.sportplan.R;
+import com.ng.trainplan.sportplan.SportPlanApplication;
+import com.ng.trainplan.sportplan.R.id;
+import com.ng.trainplan.sportplan.R.layout;
+import com.ng.trainplan.sportplan.R.menu;
+import com.ng.trainplan.sportplan.activity.fragment.ItemDetailFragment;
+import com.ng.trainplan.sportplan.activity.fragment.ItemListFragment;
+import com.ng.trainplan.sportplan.activity.fragment.TrainingSessionDetailFragment;
 import com.ng.trainplan.sportplan.bussines.Factory;
 import com.ng.trainplan.sportplan.bussines.MasterListCallbacks;
 import com.ng.trainplan.sportplan.bussines.TrainingSessionOrganizer;
 import com.ng.trainplan.sportplan.bussines.TrainingTargetOrganizer;
 
-import android.content.Intent;
-import android.os.Bundle;
-import android.support.v4.app.Fragment;
-import android.support.v4.app.FragmentActivity;
-import android.util.Log;
-import android.view.Menu;
-import android.view.MenuItem;
-
-public class ItemListActivity extends FragmentActivity implements
+public class ItemListActivity extends AbstractActivity implements
 		MasterListCallbacks, TrainingTargetOrganizer, TrainingSessionOrganizer{
 
-	private static final String TAG = ItemDetailActivity.class.getSimpleName();
 	private boolean mTwoPane;
 	private SportPlanApplication app;
 

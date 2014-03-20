@@ -1,34 +1,21 @@
-package com.ng.trainplan.sportplan;
+package com.ng.trainplan.sportplan.activity;
+
+import com.ng.trainplan.sportplan.R;
+import com.ng.trainplan.sportplan.R.id;
+import com.ng.trainplan.sportplan.R.layout;
+import com.ng.trainplan.sportplan.R.menu;
+import com.ng.trainplan.sportplan.activity.fragment.AbstractFragment;
+import com.ng.trainplan.sportplan.activity.fragment.ItemDetailFragment;
+import com.ng.trainplan.sportplan.activity.fragment.ParticipantListFragment;
 
 import android.content.Intent;
-import android.os.Bundle;
-import android.support.v4.app.FragmentActivity;
 import android.support.v4.app.NavUtils;
 import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 
-public class ParticipantListActivity extends FragmentActivity {
+public class ParticipantListActivity extends AbstractDetailActivity {
 
-	private static final String TAG = ParticipantListActivity.class.getSimpleName();
-	
-	@Override
-	protected void onCreate(Bundle savedInstanceState) {
-		super.onCreate(savedInstanceState);
-		setContentView(R.layout.activity_member_list);
-		/** Show the Up button in the action bar. */
-		getActionBar().setDisplayHomeAsUpEnabled(true);
-		if (savedInstanceState == null) {
-			Bundle arguments = new Bundle();
-			arguments.putString(ItemDetailFragment.ARG_ITEM_ID, getIntent()
-					.getStringExtra(ItemDetailFragment.ARG_ITEM_ID));
-			ParticipantListFragment fragment = new ParticipantListFragment();
-			fragment.setArguments(arguments);
-			getSupportFragmentManager().beginTransaction()
-					.add(R.id.item_detail_container, fragment).commit();
-		}
-	}
-	
 	@Override
 	public boolean onCreateOptionsMenu(Menu menu) {
 		Log.i("init menu", TAG);
@@ -57,5 +44,20 @@ public class ParticipantListActivity extends FragmentActivity {
 			return true;
 		}
 		return super.onOptionsItemSelected(item);
+	}
+
+	@Override
+	protected int getContentView() {
+		return R.layout.activity_member_list;
+	}
+
+	@Override
+	protected int getDetailContainer() {
+		return R.id.item_detail_container;
+	}
+
+	@Override
+	protected AbstractFragment getSpecificFragment() {
+		return new ParticipantListFragment();
 	}
 }
