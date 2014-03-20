@@ -1,4 +1,4 @@
-package com.ng.trainplan.sportplan.bussines;
+package com.ng.trainplan.sportplan.business;
 
 import java.util.ArrayList;
 import java.util.List;

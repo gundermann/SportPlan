@@ -1,4 +1,4 @@
-package com.ng.trainplan.sportplan.bussines;
+package com.ng.trainplan.sportplan.business;
 
 
 public class Factory {

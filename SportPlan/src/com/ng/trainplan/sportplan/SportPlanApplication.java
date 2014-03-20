@@ -3,9 +3,9 @@ package com.ng.trainplan.sportplan;
 import java.util.ArrayList;
 import java.util.List;
 
-import com.ng.trainplan.sportplan.bussines.Factory;
-import com.ng.trainplan.sportplan.bussines.MasterListItem;
-import com.ng.trainplan.sportplan.bussines.TrainingSession;
+import com.ng.trainplan.sportplan.business.Factory;
+import com.ng.trainplan.sportplan.business.MasterListItem;
+import com.ng.trainplan.sportplan.business.TrainingSession;
 
 import android.app.Application;
 

@@ -15,10 +15,10 @@ import com.ng.trainplan.sportplan.R.menu;
 import com.ng.trainplan.sportplan.activity.fragment.ItemDetailFragment;
 import com.ng.trainplan.sportplan.activity.fragment.ItemListFragment;
 import com.ng.trainplan.sportplan.activity.fragment.TrainingSessionDetailFragment;
-import com.ng.trainplan.sportplan.bussines.Factory;
-import com.ng.trainplan.sportplan.bussines.MasterListCallbacks;
-import com.ng.trainplan.sportplan.bussines.TrainingSessionOrganizer;
-import com.ng.trainplan.sportplan.bussines.TrainingTargetOrganizer;
+import com.ng.trainplan.sportplan.business.Factory;
+import com.ng.trainplan.sportplan.business.MasterListCallbacks;
+import com.ng.trainplan.sportplan.business.TrainingSessionOrganizer;
+import com.ng.trainplan.sportplan.business.TrainingTargetOrganizer;
 
 public class ItemListActivity extends AbstractActivity implements
 		MasterListCallbacks, TrainingTargetOrganizer, TrainingSessionOrganizer{

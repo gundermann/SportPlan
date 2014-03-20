@@ -13,7 +13,7 @@ import com.ng.trainplan.sportplan.R.id;
 import com.ng.trainplan.sportplan.R.layout;
 import com.ng.trainplan.sportplan.activity.ItemDetailActivity;
 import com.ng.trainplan.sportplan.activity.ItemListActivity;
-import com.ng.trainplan.sportplan.bussines.MasterListItem;
+import com.ng.trainplan.sportplan.business.MasterListItem;
 
 /**
  * A fragment representing a single Item detail screen. This fragment is either

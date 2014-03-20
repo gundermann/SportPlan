@@ -1,8 +1,8 @@
 package com.ng.trainplan.sportplan.activity.fragment;
 
 import com.ng.trainplan.sportplan.SportPlanApplication;
-import com.ng.trainplan.sportplan.bussines.MasterListCallbacks;
-import com.ng.trainplan.sportplan.bussines.MasterListItem;
+import com.ng.trainplan.sportplan.business.MasterListCallbacks;
+import com.ng.trainplan.sportplan.business.MasterListItem;
 
 import android.app.Activity;
 import android.os.Bundle;
