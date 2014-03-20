@@ -1,7 +1,11 @@
-package com.ng.trainplan.sportplan;
+package com.ng.trainplan.sportplan.activity.fragment;
 
 import java.util.ArrayList;
 import java.util.List;
+
+import com.ng.trainplan.sportplan.R;
+import com.ng.trainplan.sportplan.R.id;
+import com.ng.trainplan.sportplan.R.layout;
 
 import android.content.Context;
 import android.view.LayoutInflater;

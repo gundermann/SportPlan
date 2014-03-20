@@ -1,4 +1,4 @@
-package com.ng.trainplan.sportplan;
+package com.ng.trainplan.sportplan.activity;
 
 import android.app.AlertDialog;
 import android.app.Dialog;
@@ -7,7 +7,13 @@ import android.support.v4.app.DialogFragment;
 import android.view.View;
 import android.widget.EditText;
 
+import com.ng.trainplan.sportplan.R;
+import com.ng.trainplan.sportplan.R.id;
+import com.ng.trainplan.sportplan.R.layout;
+import com.ng.trainplan.sportplan.business.CancelDialogListener;
 import com.ng.trainplan.sportplan.business.Person;
+import com.ng.trainplan.sportplan.business.PersonSetupListener;
+import com.ng.trainplan.sportplan.business.SubmitCompetitorListener;
 
 public class NewPersonDialog extends DialogFragment {
 

@@ -1,4 +1,5 @@
-package com.ng.trainplan.sportplan;
+package com.ng.trainplan.sportplan.business;
+
 
 import android.content.DialogInterface;
 import android.content.DialogInterface.OnClickListener;

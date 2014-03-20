@@ -4,7 +4,6 @@ import java.util.List;
 
 import android.widget.ListAdapter;
 
-import com.ng.trainplan.sportplan.MemberCheckAdapter;
 
 public class MemberOverviewFragment extends AbstractListFragment {
 

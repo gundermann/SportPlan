@@ -1,8 +1,9 @@
-package com.ng.trainplan.sportplan;
+package com.ng.trainplan.sportplan.business;
 
 import android.content.DialogInterface;
 import android.content.DialogInterface.OnClickListener;
 
+import com.ng.trainplan.sportplan.activity.NewPersonDialog;
 import com.ng.trainplan.sportplan.util.PersonBuilder;
 
 public class SubmitCompetitorListener implements OnClickListener {

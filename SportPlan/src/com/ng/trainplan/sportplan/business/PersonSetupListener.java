@@ -1,6 +1,5 @@
-package com.ng.trainplan.sportplan;
+package com.ng.trainplan.sportplan.business;
 
-import com.ng.trainplan.sportplan.business.Person;
 
 public interface PersonSetupListener {
 

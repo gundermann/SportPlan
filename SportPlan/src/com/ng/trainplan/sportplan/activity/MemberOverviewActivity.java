@@ -7,12 +7,11 @@ import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 
-import com.ng.trainplan.sportplan.NewPersonDialog;
-import com.ng.trainplan.sportplan.PersonSetupListener;
 import com.ng.trainplan.sportplan.R;
 import com.ng.trainplan.sportplan.activity.fragment.ItemDetailFragment;
 import com.ng.trainplan.sportplan.activity.fragment.MemberOverviewFragment;
 import com.ng.trainplan.sportplan.business.Person;
+import com.ng.trainplan.sportplan.business.PersonSetupListener;
 
 public class MemberOverviewActivity extends AbstractDetailActivity implements PersonSetupListener {
 
