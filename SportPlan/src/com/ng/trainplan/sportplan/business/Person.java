@@ -1,9 +1,20 @@
 package com.ng.trainplan.sportplan.business;
 
-public class Person {
+import org.droidpersistence.annotation.Column;
+import org.droidpersistence.annotation.PrimaryKey;
+import org.droidpersistence.annotation.Table;
 
+@Table(name = "person")
+public class Person{
+
+	@PrimaryKey(autoIncrement=true)
+	@Column(name="id")
 	private int id;
+	
+	@Column(name="firstname")
 	private String firstname;
+	
+	@Column(name="lastname")
 	private String lastname;
 
 	public int getId() {

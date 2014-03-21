@@ -6,12 +6,12 @@ import android.content.DialogInterface.OnClickListener;
 import com.ng.trainplan.sportplan.activity.NewPersonDialog;
 import com.ng.trainplan.sportplan.util.PersonBuilder;
 
-public class SubmitCompetitorListener implements OnClickListener {
+public class SubmitPersonListener implements OnClickListener {
 
 	private NewPersonDialog dialog;
 
-	public SubmitCompetitorListener(NewPersonDialog newCompetitorDialog) {
-		this.dialog = newCompetitorDialog;
+	public SubmitPersonListener(NewPersonDialog newPersonDialog) {
+		this.dialog = newPersonDialog;
 	}
 
 	@Override

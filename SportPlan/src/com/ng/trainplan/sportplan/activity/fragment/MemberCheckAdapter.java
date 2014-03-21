@@ -14,14 +14,15 @@ import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import com.ng.trainplan.sportplan.R;
+import com.ng.trainplan.sportplan.business.Person;
 
-public class MemberCheckAdapter extends ArrayAdapter<String> implements OnClickListener {
+public class MemberCheckAdapter extends ArrayAdapter<Person> implements OnClickListener {
 
 	private Context context;
-	private List<String> defaultMember;
-	private List<String> checkedMember = new ArrayList<String>();
+	private List<Person> defaultMember;
+	private List<Person> checkedMember = new ArrayList<Person>();
 
-	public MemberCheckAdapter(Context context, List<String> defaultMember) {
+	public MemberCheckAdapter(Context context, List<Person> defaultMember) {
 		super(context, R.layout.member_list, R.id.member_name, defaultMember);
 		this.context = context;
 		this.defaultMember = defaultMember;
@@ -42,10 +43,10 @@ public class MemberCheckAdapter extends ArrayAdapter<String> implements OnClickL
 
 	private void updateView(int position, View rowView) {
 		TextView nameTextView = (TextView) rowView.findViewById(R.id.member_name);
-		nameTextView.setText(defaultMember.get(position));
+		nameTextView.setText(defaultMember.get(position).toString());
 	}
 
-	public List<String> getCheckedMember() {
+	public List<Person> getCheckedMember() {
 		return checkedMember;
 	}
 
@@ -53,12 +54,21 @@ public class MemberCheckAdapter extends ArrayAdapter<String> implements OnClickL
 	public void onClick(View checkBox) {
 		LinearLayout parent = (LinearLayout) checkBox.getParent();
 		TextView nameTV = (TextView) parent.findViewById(R.id.member_name);
+		Person changedPerson = getDefaultMemberByName(nameTV.getText());
 		if(((CheckBox) checkBox).isChecked()){
-			checkedMember.add(nameTV.getText().toString());
+			checkedMember.add(changedPerson);
 		}
 		else {
-			checkedMember.remove(nameTV.getText().toString());
+			checkedMember.remove(changedPerson);
 		}
+	}
+
+	private Person getDefaultMemberByName(CharSequence name) {
+		for(Person person : defaultMember){
+			if(person.toString().equals(name))
+				return person;
+		}
+		return null;
 	}
 
 }

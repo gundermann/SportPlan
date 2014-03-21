@@ -2,6 +2,8 @@ package com.ng.trainplan.sportplan.activity.fragment;
 
 import java.util.List;
 
+import com.ng.trainplan.sportplan.business.Person;
+
 import android.widget.ListAdapter;
 
 
@@ -14,7 +16,7 @@ public class MemberOverviewFragment extends AbstractListFragment {
 	public MemberOverviewFragment() {
 	}
 
-	public List<String> getCheckedMembers() {
+	public List<Person> getCheckedMembers() {
 		return ((MemberCheckAdapter) getListAdapter()).getCheckedMember();
 	}
 

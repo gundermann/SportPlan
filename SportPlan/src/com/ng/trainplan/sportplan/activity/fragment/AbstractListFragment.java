@@ -46,6 +46,10 @@ public abstract class AbstractListFragment extends ListFragment {
 	public void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		app = (SportPlanApplication) getActivity().getApplication();
+		updateList();
+	}
+
+	public void updateList() {
 		setListAdapter(getSpecificListAdapter());
 	}
 

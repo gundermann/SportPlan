@@ -12,7 +12,7 @@ public class TrainingSessionImpl implements TrainingSession {
 	private String date;
 	private List<Object> exercises;
 	private long length;
-	private List<String> participants;
+	private List<Person> participants;
 
 	public TrainingSessionImpl() {
 
@@ -63,17 +63,17 @@ public class TrainingSessionImpl implements TrainingSession {
 	}
 
 	@Override
-	public List<String> getMember() {
+	public List<Person> getMember() {
 		if (participants == null) {
-			this.participants = new ArrayList<String>();
+			this.participants = new ArrayList<Person>();
 		}
 		return participants;
 	}
 
 	@Override
-	public void addParticipiant(String participiant) {
+	public void addParticipiant(Person participiant) {
 		if (this.participants == null) {
-			this.participants = new ArrayList<String>();
+			this.participants = new ArrayList<Person>();
 		}
 		this.participants.add(participiant);
 	}

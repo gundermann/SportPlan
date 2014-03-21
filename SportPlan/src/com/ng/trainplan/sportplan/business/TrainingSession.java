@@ -17,8 +17,8 @@ public interface TrainingSession extends MasterListItem{
 
 	void setLength(long time);
 	
-	List<String> getMember();
+	List<Person> getMember();
 	
-	void addParticipiant(String participiant);
+	void addParticipiant(Person participiant);
 
  }

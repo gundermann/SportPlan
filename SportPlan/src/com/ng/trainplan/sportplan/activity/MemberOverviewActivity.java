@@ -47,7 +47,8 @@ public class MemberOverviewActivity extends AbstractDetailActivity implements Pe
 
 	@Override
 	public void updatePerson(Person person) {
-		app.addToDefaultMemberList(person.toString());
+		app.addPerson(person);
+		((MemberOverviewFragment) fragment).updateList();
 	}
 
 	@Override

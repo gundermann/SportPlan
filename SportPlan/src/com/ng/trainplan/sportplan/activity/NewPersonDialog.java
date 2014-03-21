@@ -11,7 +11,7 @@ import com.ng.trainplan.sportplan.R;
 import com.ng.trainplan.sportplan.business.CancelDialogListener;
 import com.ng.trainplan.sportplan.business.Person;
 import com.ng.trainplan.sportplan.business.PersonSetupListener;
-import com.ng.trainplan.sportplan.business.SubmitCompetitorListener;
+import com.ng.trainplan.sportplan.business.SubmitPersonListener;
 
 public class NewPersonDialog extends DialogFragment {
 
@@ -50,7 +50,7 @@ public class NewPersonDialog extends DialogFragment {
 		dialogBuilder
 				.setView(view)
 				.setPositiveButton(android.R.string.ok,
-						new SubmitCompetitorListener(this))
+						new SubmitPersonListener(this))
 				.setNegativeButton(android.R.string.cancel,
 						new CancelDialogListener(personSetupListener)).setCancelable(false);
 		return dialogBuilder.create();
