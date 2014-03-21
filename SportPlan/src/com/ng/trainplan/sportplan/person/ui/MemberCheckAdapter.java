@@ -1,4 +1,4 @@
-package com.ng.trainplan.sportplan.activity.fragment;
+package com.ng.trainplan.sportplan.person.ui;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -14,7 +14,7 @@ import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import com.ng.trainplan.sportplan.R;
-import com.ng.trainplan.sportplan.business.Person;
+import com.ng.trainplan.sportplan.person.business.Person;
 
 public class MemberCheckAdapter extends ArrayAdapter<Person> implements OnClickListener {
 

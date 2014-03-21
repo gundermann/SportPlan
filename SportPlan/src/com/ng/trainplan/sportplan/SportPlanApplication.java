@@ -3,21 +3,19 @@ package com.ng.trainplan.sportplan;
 import java.util.ArrayList;
 import java.util.List;
 
+import android.app.Application;
+
 import com.ng.trainplan.sportplan.business.Factory;
 import com.ng.trainplan.sportplan.business.MasterListItem;
-import com.ng.trainplan.sportplan.business.Person;
 import com.ng.trainplan.sportplan.business.TrainingSession;
-import com.ng.trainplan.sportplan.persistence.DBHelper;
-import com.ng.trainplan.sportplan.persistence.DataManager;
-import com.ng.trainplan.sportplan.persistence.DataManagerImpl;
-
-import android.app.Application;
+import com.ng.trainplan.sportplan.person.business.Person;
+import com.ng.trainplan.sportplan.person.persistence.PersonDataManager;
+import com.ng.trainplan.sportplan.person.persistence.PersonDataManagerImpl;
 
 public class SportPlanApplication extends Application {
 
 	private static TrainingSession actualSession;
-	private List<String> member = new ArrayList<String>();
-	private DataManager dbHelper;
+	private PersonDataManager dbHelper;
 
 	public TrainingSession getActualTrainingSession() {
 		if (actualSession == null) {
@@ -53,9 +51,9 @@ public class SportPlanApplication extends Application {
 		return getPersonDBHelper().getPersonList();
 	}
 
-	private DataManager getPersonDBHelper() {
+	private PersonDataManager getPersonDBHelper() {
 		if(dbHelper ==null)
-			dbHelper = new DataManagerImpl(this);
+			dbHelper = new PersonDataManagerImpl(this);
 		return dbHelper;
 	}
 

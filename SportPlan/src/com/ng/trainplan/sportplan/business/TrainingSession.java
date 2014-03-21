@@ -2,6 +2,8 @@ package com.ng.trainplan.sportplan.business;
 
 import java.util.List;
 
+import com.ng.trainplan.sportplan.person.business.Person;
+
 
 public interface TrainingSession extends MasterListItem{
 

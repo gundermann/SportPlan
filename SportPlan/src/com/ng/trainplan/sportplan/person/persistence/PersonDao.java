@@ -1,11 +1,12 @@
-package com.ng.trainplan.sportplan.persistence;
+package com.ng.trainplan.sportplan.person.persistence;
 
 import org.droidpersistence.dao.DroidDao;
 import org.droidpersistence.dao.TableDefinition;
 
+import com.ng.trainplan.sportplan.person.business.Person;
+
 import android.database.sqlite.SQLiteDatabase;
 
-import com.ng.trainplan.sportplan.business.Person;
 
 public class PersonDao extends DroidDao<Person, Long> {
 

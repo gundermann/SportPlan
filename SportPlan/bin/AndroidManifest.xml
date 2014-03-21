@@ -40,7 +40,7 @@
                 android:value="com.ng.trainplan.sportplan.activity.ItemListActivity." />
         </activity>
         <activity
-            android:name="com.ng.trainplan.sportplan.activity.MemberOverviewActivity"
+            android:name="com.ng.trainplan.sportplan.person.ui.MemberOverviewActivity"
             android:label="@string/title_member_list"
             android:parentActivityName="com.ng.trainplan.sportplan.activity.ItemListActivity" >
             <meta-data android:name="android.support.PARENT_ACTIVITY"

@@ -9,9 +9,9 @@ import android.widget.EditText;
 
 import com.ng.trainplan.sportplan.R;
 import com.ng.trainplan.sportplan.business.CancelDialogListener;
-import com.ng.trainplan.sportplan.business.Person;
-import com.ng.trainplan.sportplan.business.PersonSetupListener;
-import com.ng.trainplan.sportplan.business.SubmitPersonListener;
+import com.ng.trainplan.sportplan.person.business.Person;
+import com.ng.trainplan.sportplan.person.business.PersonSetupListener;
+import com.ng.trainplan.sportplan.person.business.SubmitPersonListener;
 
 public class NewPersonDialog extends DialogFragment {
 

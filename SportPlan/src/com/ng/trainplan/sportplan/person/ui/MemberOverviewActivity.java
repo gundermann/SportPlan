@@ -1,4 +1,4 @@
-package com.ng.trainplan.sportplan.activity;
+package com.ng.trainplan.sportplan.person.ui;
 
 import android.content.Intent;
 import android.support.v4.app.Fragment;
@@ -8,10 +8,12 @@ import android.view.Menu;
 import android.view.MenuItem;
 
 import com.ng.trainplan.sportplan.R;
+import com.ng.trainplan.sportplan.activity.AbstractDetailActivity;
+import com.ng.trainplan.sportplan.activity.NewPersonDialog;
+import com.ng.trainplan.sportplan.activity.ParticipantListActivity;
 import com.ng.trainplan.sportplan.activity.fragment.ItemDetailFragment;
-import com.ng.trainplan.sportplan.activity.fragment.MemberOverviewFragment;
-import com.ng.trainplan.sportplan.business.Person;
-import com.ng.trainplan.sportplan.business.PersonSetupListener;
+import com.ng.trainplan.sportplan.person.business.Person;
+import com.ng.trainplan.sportplan.person.business.PersonSetupListener;
 
 public class MemberOverviewActivity extends AbstractDetailActivity implements PersonSetupListener {
 

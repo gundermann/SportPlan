@@ -3,6 +3,7 @@ package com.ng.trainplan.sportplan.business;
 import java.util.ArrayList;
 import java.util.List;
 
+import com.ng.trainplan.sportplan.person.business.Person;
 import com.ng.trainplan.sportplan.util.DateHelper;
 
 public class TrainingSessionImpl implements TrainingSession {

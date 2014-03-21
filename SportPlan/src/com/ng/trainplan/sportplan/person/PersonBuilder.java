@@ -1,6 +1,7 @@
-package com.ng.trainplan.sportplan.util;
+package com.ng.trainplan.sportplan.person;
 
-import com.ng.trainplan.sportplan.business.Person;
+import com.ng.trainplan.sportplan.person.business.Person;
+
 
 public class PersonBuilder {
 	

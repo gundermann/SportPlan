@@ -1,6 +1,8 @@
 package com.ng.trainplan.sportplan.business;
 
 
+import com.ng.trainplan.sportplan.person.business.PersonSetupListener;
+
 import android.content.DialogInterface;
 import android.content.DialogInterface.OnClickListener;
 

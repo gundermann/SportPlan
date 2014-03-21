@@ -10,6 +10,7 @@ import android.view.MenuItem;
 import com.ng.trainplan.sportplan.R;
 import com.ng.trainplan.sportplan.activity.fragment.ItemDetailFragment;
 import com.ng.trainplan.sportplan.activity.fragment.ParticipantListFragment;
+import com.ng.trainplan.sportplan.person.ui.MemberOverviewActivity;
 
 public class ParticipantListActivity extends AbstractDetailActivity {
 

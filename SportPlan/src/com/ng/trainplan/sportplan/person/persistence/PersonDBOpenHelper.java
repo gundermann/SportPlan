@@ -1,17 +1,16 @@
-package com.ng.trainplan.sportplan.persistence;
+package com.ng.trainplan.sportplan.person.persistence;
 
 import android.content.Context;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteDatabase.CursorFactory;
 import android.database.sqlite.SQLiteOpenHelper;
 
-import com.ng.trainplan.sportplan.persistence.table.PersonTableDefinition;
 
-public class OpenHelper extends SQLiteOpenHelper {
+public class PersonDBOpenHelper extends SQLiteOpenHelper {
 
 	
 
-	public OpenHelper(Context context, String name, CursorFactory factory,
+	public PersonDBOpenHelper(Context context, String name, CursorFactory factory,
 			int version) {
 		super(context, name, factory, version);
 		getReadableDatabase();
@@ -29,6 +28,7 @@ public class OpenHelper extends SQLiteOpenHelper {
 	public void onCreate(SQLiteDatabase db) {
 		try{
 			PersonTableDefinition personTableDefinition = new PersonTableDefinition();
+			//necessary!!!
 			personTableDefinition.onCreate(db);
 		}catch(Exception e){
 			e.printStackTrace();
