@@ -46,7 +46,5 @@ public abstract class AbstractDetailActivity extends AbstractActivity {
 
 	protected abstract int getDetailContainer();
 
-	protected abstract Fragment getSpecificFragment();
-
 	protected abstract int getContentView();
 }

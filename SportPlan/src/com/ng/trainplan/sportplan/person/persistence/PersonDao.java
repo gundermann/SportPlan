@@ -3,7 +3,7 @@ package com.ng.trainplan.sportplan.person.persistence;
 import org.droidpersistence.dao.DroidDao;
 import org.droidpersistence.dao.TableDefinition;
 
-import com.ng.trainplan.sportplan.person.business.Person;
+import com.ng.trainplan.sportplan.person.Person;
 
 import android.database.sqlite.SQLiteDatabase;
 

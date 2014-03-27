@@ -32,7 +32,7 @@
                 android:value=".ItemListActivity" />
         </activity>
         <activity
-            android:name="com.ng.trainplan.sportplan.activity.TrainingSessionDetailActivity"
+            android:name="com.ng.trainplan.sportplan.trainingsession.ui.TrainingSessionDetailActivity"
             android:label="@string/title_training_session_detail"
             android:parentActivityName="com.ng.trainplan.sportplan.activity.ItemListActivity" >
             <meta-data

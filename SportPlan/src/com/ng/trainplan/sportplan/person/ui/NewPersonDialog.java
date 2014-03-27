@@ -1,4 +1,4 @@
-package com.ng.trainplan.sportplan.activity;
+package com.ng.trainplan.sportplan.person.ui;
 
 import android.app.AlertDialog;
 import android.app.Dialog;
@@ -9,7 +9,7 @@ import android.widget.EditText;
 
 import com.ng.trainplan.sportplan.R;
 import com.ng.trainplan.sportplan.business.CancelDialogListener;
-import com.ng.trainplan.sportplan.person.business.Person;
+import com.ng.trainplan.sportplan.person.Person;
 import com.ng.trainplan.sportplan.person.business.PersonSetupListener;
 import com.ng.trainplan.sportplan.person.business.SubmitPersonListener;
 

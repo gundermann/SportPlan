@@ -1,4 +1,4 @@
-package com.ng.trainplan.sportplan.business;
+package com.ng.trainplan.sportplan.trainingsession.business;
 
 public interface TrainingTargetOrganizer {
 

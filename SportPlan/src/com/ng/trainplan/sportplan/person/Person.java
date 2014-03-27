@@ -1,4 +1,4 @@
-package com.ng.trainplan.sportplan.person.business;
+package com.ng.trainplan.sportplan.person;
 
 import org.droidpersistence.annotation.Column;
 import org.droidpersistence.annotation.PrimaryKey;

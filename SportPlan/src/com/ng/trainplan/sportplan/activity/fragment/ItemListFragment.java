@@ -6,6 +6,7 @@ import android.widget.ArrayAdapter;
 import android.widget.ListAdapter;
 import android.widget.ListView;
 
+import com.ng.trainplan.sportplan.SportPlanApplication;
 import com.ng.trainplan.sportplan.business.MasterListCallbacks;
 import com.ng.trainplan.sportplan.business.MasterListItem;
 
@@ -69,6 +70,6 @@ public class ItemListFragment extends AbstractListFragment {
 	protected ListAdapter getSpecificListAdapter() {
 		return new ArrayAdapter<MasterListItem>(getActivity(),
 				android.R.layout.simple_list_item_activated_1,
-				android.R.id.text1, app.getMasterList());
+				android.R.id.text1, ((SportPlanApplication) getActivity().getApplication()).getMasterList());
 	}
 }

@@ -1,5 +1,8 @@
 package com.ng.trainplan.sportplan.business;
 
+import com.ng.trainplan.sportplan.trainingsession.business.TrainingSession;
+import com.ng.trainplan.sportplan.trainingsession.business.TrainingSessionImpl;
+
 
 public class Factory {
 

@@ -17,6 +17,9 @@ public abstract class AbstractActivity extends FragmentActivity {
 		super.onCreate(savedBundle);
 		TAG = this.getClass().getSimpleName();
 		app = (SportPlanApplication) getApplication();
+		fragment = getSpecificFragment();
 	}
+	
+	protected abstract Fragment getSpecificFragment();
 	
 }

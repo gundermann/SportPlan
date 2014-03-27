@@ -1,8 +1,9 @@
-package com.ng.trainplan.sportplan.activity.fragment;
+package com.ng.trainplan.sportplan.trainingsession.ui;
 
 import com.ng.trainplan.sportplan.R;
 import com.ng.trainplan.sportplan.activity.ItemDetailActivity;
 import com.ng.trainplan.sportplan.activity.ItemListActivity;
+import com.ng.trainplan.sportplan.activity.fragment.AbstractFragment;
 
 /**
  * A fragment representing a single Item detail screen. This fragment is either

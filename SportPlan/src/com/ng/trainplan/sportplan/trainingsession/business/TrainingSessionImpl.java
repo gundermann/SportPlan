@@ -1,23 +1,22 @@
-package com.ng.trainplan.sportplan.business;
+package com.ng.trainplan.sportplan.trainingsession.business;
 
 import java.util.ArrayList;
 import java.util.List;
 
-import com.ng.trainplan.sportplan.person.business.Person;
+import com.ng.trainplan.sportplan.person.Person;
 import com.ng.trainplan.sportplan.util.DateHelper;
+
+
 
 public class TrainingSessionImpl implements TrainingSession {
 
-	// TODO use id from database when persistence is enabled
-	private int id = 0;
 	private String date;
+	
 	private List<Object> exercises;
+	
 	private long length;
+	
 	private List<Person> participants;
-
-	public TrainingSessionImpl() {
-
-	}
 
 	@Override
 	public String toString() {
@@ -79,8 +78,4 @@ public class TrainingSessionImpl implements TrainingSession {
 		this.participants.add(participiant);
 	}
 
-	@Override
-	public int getId() {
-		return id;
-	}
 }

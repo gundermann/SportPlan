@@ -1,11 +1,10 @@
-package com.ng.trainplan.sportplan.business;
+package com.ng.trainplan.sportplan.trainingsession.business;
 
 import java.util.List;
 
-import com.ng.trainplan.sportplan.person.business.Person;
+import com.ng.trainplan.sportplan.person.Person;
 
-
-public interface TrainingSession extends MasterListItem{
+public interface TrainingSession {
 
 	String getDate();
 
@@ -18,9 +17,9 @@ public interface TrainingSession extends MasterListItem{
 	long getLength();
 
 	void setLength(long time);
-	
+
 	List<Person> getMember();
-	
+
 	void addParticipiant(Person participiant);
 
- }
+}

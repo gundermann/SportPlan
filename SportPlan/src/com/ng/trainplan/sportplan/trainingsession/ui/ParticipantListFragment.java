@@ -1,6 +1,7 @@
-package com.ng.trainplan.sportplan.activity.fragment;
+package com.ng.trainplan.sportplan.trainingsession.ui;
 
-import com.ng.trainplan.sportplan.person.business.Person;
+import com.ng.trainplan.sportplan.activity.fragment.AbstractListFragment;
+import com.ng.trainplan.sportplan.person.Person;
 
 import android.widget.ArrayAdapter;
 import android.widget.ListAdapter;

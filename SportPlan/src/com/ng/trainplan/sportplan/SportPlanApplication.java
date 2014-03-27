@@ -1,21 +1,24 @@
 package com.ng.trainplan.sportplan;
 
-import java.util.ArrayList;
 import java.util.List;
 
 import android.app.Application;
+import android.util.Log;
 
 import com.ng.trainplan.sportplan.business.Factory;
 import com.ng.trainplan.sportplan.business.MasterListItem;
-import com.ng.trainplan.sportplan.business.TrainingSession;
-import com.ng.trainplan.sportplan.person.business.Person;
+import com.ng.trainplan.sportplan.person.Person;
 import com.ng.trainplan.sportplan.person.persistence.PersonDataManager;
 import com.ng.trainplan.sportplan.person.persistence.PersonDataManagerImpl;
+import com.ng.trainplan.sportplan.trainingsession.business.TrainingSession;
+import com.ng.trainplan.sportplan.trainingsession.persistence.TrainingSessionDataManager;
+import com.ng.trainplan.sportplan.trainingsession.persistence.TrainingSessionDataManagerImpl;
 
 public class SportPlanApplication extends Application {
 
 	private static TrainingSession actualSession;
-	private PersonDataManager dbHelper;
+	private PersonDataManager pDbHelper;
+	private TrainingSessionDataManager tsDbHelper;
 
 	public TrainingSession getActualTrainingSession() {
 		if (actualSession == null) {
@@ -24,23 +27,17 @@ public class SportPlanApplication extends Application {
 		return actualSession;
 	}
 
-	public void setActualTrainingSession(TrainingSession createTrainingSession) {
-		actualSession = Factory.getInstance().createTrainingSession();
+	public void setActualTrainingSession(TrainingSession trainingSession) {
+		actualSession = trainingSession;
 	}
 
 	public List<MasterListItem> getMasterList() {
-		List<MasterListItem> masterList = new ArrayList<MasterListItem>();
-		masterList.add(0, getActualTrainingSession());
-		return masterList;
+		return getTrainigSessionDBHelper()
+				.getMasterListItems();
 	}
 
-	public MasterListItem getMasterListItemById(String id) {
-		// TODO change when persistence is enabled
-		for (MasterListItem item : getMasterList()) {
-			if (Integer.parseInt(id) == item.getId())
-				return item;
-		}
-		return null;
+	public MasterListItem getMasterListItemById(long id) {
+		return getTrainigSessionDBHelper().getMasterListItem(id);
 	}
 
 	public List<Person> getActualMemberList() {
@@ -52,11 +49,17 @@ public class SportPlanApplication extends Application {
 	}
 
 	private PersonDataManager getPersonDBHelper() {
-		if(dbHelper ==null)
-			dbHelper = new PersonDataManagerImpl(this);
-		return dbHelper;
+		if (pDbHelper == null)
+			pDbHelper = new PersonDataManagerImpl(this);
+		return pDbHelper;
 	}
 
+	private TrainingSessionDataManager getTrainigSessionDBHelper() {
+		if (tsDbHelper == null) {
+			tsDbHelper = new TrainingSessionDataManagerImpl(this);
+		}
+		return tsDbHelper;
+	}
 
 	public void setupParticipiants(List<Person> checkedMembers) {
 		for (Person participiant : checkedMembers) {
@@ -64,9 +67,16 @@ public class SportPlanApplication extends Application {
 		}
 	}
 
-	
-	public void addPerson(Person person){
-		dbHelper.savePerson(person);
+	public void addPerson(Person person) {
+		pDbHelper.savePerson(person);
+	}
+
+	public void saveTrainingSession(TrainingSession trainingSession) {
+		try {
+			tsDbHelper.saveTrainingSession(trainingSession);
+		} catch (Exception e) {
+			Log.e("TRAININGSESSION", e.getMessage());
+		}
 	}
 
 }

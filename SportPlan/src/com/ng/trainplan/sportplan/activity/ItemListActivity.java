@@ -1,5 +1,6 @@
 package com.ng.trainplan.sportplan.activity;
 
+import android.app.DatePickerDialog;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
@@ -8,42 +9,40 @@ import android.view.Menu;
 import android.view.MenuItem;
 
 import com.ng.trainplan.sportplan.R;
-import com.ng.trainplan.sportplan.SportPlanApplication;
+import com.ng.trainplan.sportplan.activity.fragment.AbstractListFragment;
 import com.ng.trainplan.sportplan.activity.fragment.ItemDetailFragment;
 import com.ng.trainplan.sportplan.activity.fragment.ItemListFragment;
-import com.ng.trainplan.sportplan.activity.fragment.TrainingSessionDetailFragment;
-import com.ng.trainplan.sportplan.business.Factory;
 import com.ng.trainplan.sportplan.business.MasterListCallbacks;
-import com.ng.trainplan.sportplan.business.TrainingSessionOrganizer;
-import com.ng.trainplan.sportplan.business.TrainingTargetOrganizer;
+import com.ng.trainplan.sportplan.trainingsession.TrainingSessionConfigurator;
+import com.ng.trainplan.sportplan.trainingsession.business.TrainingSession;
+import com.ng.trainplan.sportplan.trainingsession.business.TrainingSessionOrganizer;
+import com.ng.trainplan.sportplan.trainingsession.business.TrainingTargetOrganizer;
+import com.ng.trainplan.sportplan.trainingsession.ui.TrainingSessionDetailActivity;
+import com.ng.trainplan.sportplan.trainingsession.ui.TrainingSessionDetailFragment;
+import com.ng.trainplan.sportplan.util.DateHelper;
 
 public class ItemListActivity extends AbstractActivity implements
-		MasterListCallbacks, TrainingTargetOrganizer, TrainingSessionOrganizer{
+		MasterListCallbacks, TrainingTargetOrganizer, TrainingSessionOrganizer {
 
 	private boolean mTwoPane;
-	private SportPlanApplication app;
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_item_list);
 		if (findViewById(R.id.item_detail_container) != null) {
-			// only in the large-screen layouts 
+			// only in the large-screen layouts
 			mTwoPane = true;
-			((ItemListFragment) getSupportFragmentManager().findFragmentById(
-					R.id.item_list)).setActivateOnItemClick(true);
+			((ItemListFragment) getSpecificFragment()).setActivateOnItemClick(true);
 		}
-		app = (SportPlanApplication) getApplication();
 	}
-	
+
 	@Override
 	public boolean onCreateOptionsMenu(Menu menu) {
 		Log.i("init menu", TAG);
 		getMenuInflater().inflate(R.menu.mastermenu, menu);
 		return true;
 	}
-	
-	
 
 	@Override
 	public boolean onOptionsItemSelected(MenuItem item) {
@@ -61,22 +60,22 @@ public class ItemListActivity extends AbstractActivity implements
 	}
 
 	/**
-	 * Callback method from {@link ItemListFragment.MasterListCallbacks} indicating that
-	 * the item with the given ID was selected.
+	 * Callback method from {@link ItemListFragment.MasterListCallbacks}
+	 * indicating that the item with the given ID was selected.
 	 */
 	@Override
 	public void onItemSelected(String id) {
 		if (mTwoPane) {
-			
+
 			// In two-pane mode, show the detail view in this activity by
 			// adding or replacing the detail fragment using a
 			// fragment transaction.
 			Fragment fragment;
 			Bundle arguments = new Bundle();
 			arguments.putString(ItemDetailFragment.ARG_ITEM_ID, id);
-			if(id.equals("0")){
+			if (id.equals("0")) {
 				fragment = new TrainingSessionDetailFragment();
-			}else {
+			} else {
 				fragment = new ItemDetailFragment();
 			}
 			fragment.setArguments(arguments);
@@ -87,9 +86,10 @@ public class ItemListActivity extends AbstractActivity implements
 			// In single-pane mode, simply start the detail activity
 			// for the selected item ID.
 			Intent detailIntent;
-			if(id.equals("0")){
-				detailIntent = new Intent(this, TrainingSessionDetailActivity.class);
-			}else{
+			if (id.equals("0")) {
+				detailIntent = new Intent(this,
+						TrainingSessionDetailActivity.class);
+			} else {
 				detailIntent = new Intent(this, ItemDetailActivity.class);
 			}
 			detailIntent.putExtra(ItemDetailFragment.ARG_ITEM_ID, id);
@@ -104,6 +104,20 @@ public class ItemListActivity extends AbstractActivity implements
 
 	@Override
 	public void addNewTrainingSession() {
-		app.setActualTrainingSession(Factory.getInstance().createTrainingSession());
+		new DatePickerDialog(this, new TrainingSessionConfigurator(this),
+				DateHelper.getCurrentYear(), DateHelper.getCurrentMonth(),
+				DateHelper.getCurrentDayOfMonth()).show();
+	}
+
+	@Override
+	public void saveTrainingSession(TrainingSession trainingSession) {
+		app.saveTrainingSession(trainingSession);
+		((AbstractListFragment) fragment).updateList();
+	}
+
+	@Override
+	protected Fragment getSpecificFragment() {
+		return getSupportFragmentManager().findFragmentById(
+				R.id.item_list);
 	}
 }

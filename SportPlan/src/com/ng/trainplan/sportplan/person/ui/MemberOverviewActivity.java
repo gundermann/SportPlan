@@ -9,10 +9,9 @@ import android.view.MenuItem;
 
 import com.ng.trainplan.sportplan.R;
 import com.ng.trainplan.sportplan.activity.AbstractDetailActivity;
-import com.ng.trainplan.sportplan.activity.NewPersonDialog;
 import com.ng.trainplan.sportplan.activity.ParticipantListActivity;
 import com.ng.trainplan.sportplan.activity.fragment.ItemDetailFragment;
-import com.ng.trainplan.sportplan.person.business.Person;
+import com.ng.trainplan.sportplan.person.Person;
 import com.ng.trainplan.sportplan.person.business.PersonSetupListener;
 
 public class MemberOverviewActivity extends AbstractDetailActivity implements PersonSetupListener {

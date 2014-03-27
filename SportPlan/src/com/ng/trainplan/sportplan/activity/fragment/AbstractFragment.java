@@ -29,8 +29,8 @@ public abstract class AbstractFragment extends Fragment {
 		super.onCreate(savedInstanceState);
 		app = (SportPlanApplication) getActivity().getApplication();
 		if (getArguments().containsKey(ARG_ITEM_ID)) {
-			mItem = app.getMasterListItemById(getArguments().getString(
-					ARG_ITEM_ID));
+			mItem = app.getMasterListItemById(Long.parseLong(getArguments().getString(
+					ARG_ITEM_ID)));
 		}
 	}
 

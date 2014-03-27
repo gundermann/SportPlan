@@ -2,7 +2,8 @@ package com.ng.trainplan.sportplan.person.persistence;
 
 import java.util.List;
 
-import com.ng.trainplan.sportplan.person.business.Person;
+import com.ng.trainplan.sportplan.persistence.OpenHelper;
+import com.ng.trainplan.sportplan.person.Person;
 
 import android.content.Context;
 import android.database.sqlite.SQLiteDatabase;
@@ -11,12 +12,12 @@ import android.database.sqlite.SQLiteOpenHelper;
 
 public class PersonDataManagerImpl implements PersonDataManager {
 
+
 	private SQLiteDatabase database;
 	private PersonDao personDao;
 
 	public PersonDataManagerImpl(Context context){
-		SQLiteOpenHelper openHelper = new PersonDBOpenHelper(context, "GAMEDATABASE",
-				null, 2);
+		SQLiteOpenHelper openHelper = new OpenHelper(context);
 		setDatabase(openHelper.getWritableDatabase());
 
 		this.personDao = new PersonDao(new PersonTableDefinition(), database);
