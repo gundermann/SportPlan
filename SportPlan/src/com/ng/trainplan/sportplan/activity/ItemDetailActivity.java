@@ -23,7 +23,7 @@ public class ItemDetailActivity extends AbstractDetailActivity {
 			// http://developer.android.com/design/patterns/navigation.html#up-vs-back
 			//
 			NavUtils.navigateUpTo(this,
-					new Intent(this, ItemListActivity.class));
+					new Intent(this, MasterListActivity.class));
 			return true;
 		}
 		return super.onOptionsItemSelected(item);

@@ -8,7 +8,7 @@ import android.view.MenuItem;
 
 import com.ng.trainplan.sportplan.R;
 import com.ng.trainplan.sportplan.activity.AbstractDetailActivity;
-import com.ng.trainplan.sportplan.activity.ItemListActivity;
+import com.ng.trainplan.sportplan.activity.MasterListActivity;
 import com.ng.trainplan.sportplan.activity.ParticipantListActivity;
 import com.ng.trainplan.sportplan.activity.fragment.AbstractFragment;
 import com.ng.trainplan.sportplan.activity.fragment.ItemDetailFragment;
@@ -27,7 +27,7 @@ public class TrainingSessionDetailActivity extends AbstractDetailActivity {
 		switch (item.getItemId()) {
 		case android.R.id.home:
 			NavUtils.navigateUpTo(this,
-					new Intent(this, ItemListActivity.class));
+					new Intent(this, MasterListActivity.class));
 			return true;
 		case R.id.close_training_session:
 			return true;

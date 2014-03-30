@@ -1,6 +1,5 @@
 package com.ng.trainplan.sportplan.activity;
 
-import android.app.DatePickerDialog;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
@@ -19,9 +18,8 @@ import com.ng.trainplan.sportplan.trainingsession.business.TrainingSessionOrgani
 import com.ng.trainplan.sportplan.trainingsession.business.TrainingTargetOrganizer;
 import com.ng.trainplan.sportplan.trainingsession.ui.TrainingSessionDetailActivity;
 import com.ng.trainplan.sportplan.trainingsession.ui.TrainingSessionDetailFragment;
-import com.ng.trainplan.sportplan.util.DateHelper;
 
-public class ItemListActivity extends AbstractActivity implements
+public class MasterListActivity extends AbstractActivity implements
 		MasterListCallbacks, TrainingTargetOrganizer, TrainingSessionOrganizer {
 
 	private boolean mTwoPane;
@@ -33,7 +31,8 @@ public class ItemListActivity extends AbstractActivity implements
 		if (findViewById(R.id.item_detail_container) != null) {
 			// only in the large-screen layouts
 			mTwoPane = true;
-			((ItemListFragment) getSpecificFragment()).setActivateOnItemClick(true);
+			((ItemListFragment) getSpecificFragment())
+					.setActivateOnItemClick(true);
 		}
 	}
 
@@ -104,9 +103,7 @@ public class ItemListActivity extends AbstractActivity implements
 
 	@Override
 	public void addNewTrainingSession() {
-		new DatePickerDialog(this, new TrainingSessionConfigurator(this),
-				DateHelper.getCurrentYear(), DateHelper.getCurrentMonth(),
-				DateHelper.getCurrentDayOfMonth()).show();
+		DateTimePickerPopup.show(this, new TrainingSessionConfigurator(this));
 	}
 
 	@Override
@@ -117,7 +114,6 @@ public class ItemListActivity extends AbstractActivity implements
 
 	@Override
 	protected Fragment getSpecificFragment() {
-		return getSupportFragmentManager().findFragmentById(
-				R.id.item_list);
+		return getSupportFragmentManager().findFragmentById(R.id.item_list);
 	}
 }

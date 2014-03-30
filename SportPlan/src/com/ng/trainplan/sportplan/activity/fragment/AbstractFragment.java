@@ -28,7 +28,7 @@ public abstract class AbstractFragment extends Fragment {
 	public void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		app = (SportPlanApplication) getActivity().getApplication();
-		if (getArguments().containsKey(ARG_ITEM_ID)) {
+		if (getArguments() != null && getArguments().containsKey(ARG_ITEM_ID)) {
 			mItem = app.getMasterListItemById(Long.parseLong(getArguments().getString(
 					ARG_ITEM_ID)));
 		}

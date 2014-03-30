@@ -15,7 +15,7 @@
         android:label="@string/app_name"
         android:theme="@style/AppTheme" >
         <activity
-            android:name="com.ng.trainplan.sportplan.activity.ItemListActivity"
+            android:name="com.ng.trainplan.sportplan.activity.MasterListActivity"
             android:label="@string/app_name" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -26,7 +26,7 @@
         <activity
             android:name="com.ng.trainplan.sportplan.activity.ItemDetailActivity"
             android:label="@string/title_item_detail"
-            android:parentActivityName="com.ng.trainplan.sportplan.activity.ItemListActivity" >
+            android:parentActivityName="com.ng.trainplan.sportplan.activity.MasterListActivity" >
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value=".ItemListActivity" />
@@ -34,7 +34,7 @@
         <activity
             android:name="com.ng.trainplan.sportplan.trainingsession.ui.TrainingSessionDetailActivity"
             android:label="@string/title_training_session_detail"
-            android:parentActivityName="com.ng.trainplan.sportplan.activity.ItemListActivity" >
+            android:parentActivityName="com.ng.trainplan.sportplan.activity.MasterListActivity" >
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.ng.trainplan.sportplan.activity.ItemListActivity." />
@@ -42,7 +42,7 @@
         <activity
             android:name="com.ng.trainplan.sportplan.person.ui.MemberOverviewActivity"
             android:label="@string/title_member_list"
-            android:parentActivityName="com.ng.trainplan.sportplan.activity.ItemListActivity" >
+            android:parentActivityName="com.ng.trainplan.sportplan.activity.MasterListActivity" >
             <meta-data android:name="android.support.PARENT_ACTIVITY"
                 android:value=".ItemListActivity" />
         </activity>
@@ -53,6 +53,11 @@
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value=".MemberListActivity" />
+        </activity>
+        <activity 
+            android:name="com.ng.trainplan.sportplan.activity.DateTimePickerPopup"
+            android:label="@string/setup"
+            >
         </activity>
     </application>
 

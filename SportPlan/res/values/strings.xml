@@ -13,5 +13,6 @@
     <string name="title_member_overview">Mitgliederliste</string>
     <string name="title_member_list">Teilnehmerliste</string>
     <string name="PersonNameHint">Name</string>
+    <string name="setup">Setup</string>
 
 </resources>

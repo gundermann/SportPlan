@@ -6,6 +6,6 @@
     android:layout_height="match_parent"
     android:layout_marginLeft="16dp"
     android:layout_marginRight="16dp"
-    tools:context=".ItemListActivity"
+    tools:context="com.ng.trainplan.sportplan.activity.fragment.ItemListActivity"
     tools:layout="@android:layout/list_content" />
 

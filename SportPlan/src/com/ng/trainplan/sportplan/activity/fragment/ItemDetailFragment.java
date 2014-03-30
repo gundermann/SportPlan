@@ -2,11 +2,11 @@ package com.ng.trainplan.sportplan.activity.fragment;
 
 import com.ng.trainplan.sportplan.R;
 import com.ng.trainplan.sportplan.activity.ItemDetailActivity;
-import com.ng.trainplan.sportplan.activity.ItemListActivity;
+import com.ng.trainplan.sportplan.activity.MasterListActivity;
 
 /**
  * A fragment representing a single Item detail screen. This fragment is either
- * contained in a {@link ItemListActivity} in two-pane mode (on tablets) or a
+ * contained in a {@link MasterListActivity} in two-pane mode (on tablets) or a
  * {@link ItemDetailActivity} on handsets.
  */
 public class ItemDetailFragment extends AbstractFragment {
