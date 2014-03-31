@@ -72,11 +72,11 @@ public class MasterListActivity extends AbstractActivity implements
 			Fragment fragment;
 			Bundle arguments = new Bundle();
 			arguments.putString(ItemDetailFragment.ARG_ITEM_ID, id);
-			if (id.equals("0")) {
+//			if (id.equals("0")) {
 				fragment = new TrainingSessionDetailFragment();
-			} else {
+//			} else {
 				fragment = new ItemDetailFragment();
-			}
+//			}
 			fragment.setArguments(arguments);
 			getSupportFragmentManager().beginTransaction()
 					.replace(R.id.item_detail_container, fragment).commit();

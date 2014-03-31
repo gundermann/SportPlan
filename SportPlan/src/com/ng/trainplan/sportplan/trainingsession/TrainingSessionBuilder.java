@@ -7,7 +7,7 @@ import com.ng.trainplan.sportplan.util.DateHelper;
 public class TrainingSessionBuilder {
 	
 	
-
+	private long time = DateHelper.getCurrentTime();
 	private String date = DateHelper.getCurrentDateAsString();
 
 	public TrainingSessionBuilder setDate(String date){
@@ -18,6 +18,12 @@ public class TrainingSessionBuilder {
 	public TrainingSession build(){
 		TrainingSession ts = new TrainingSessionImpl();
 		ts.setDate(date);
+		ts.setStart(time);
 		return ts;
+	}
+
+	public TrainingSessionBuilder setTime(long time) {
+		this.time  = time;
+		return this;
 	}
 }

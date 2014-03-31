@@ -5,11 +5,15 @@ import android.support.v4.app.FragmentPagerAdapter;
 
 import com.ng.trainplan.sportplan.activity.fragment.DatePickerFragment;
 import com.ng.trainplan.sportplan.activity.fragment.TimePickerFragment;
+import com.ng.trainplan.sportplan.trainingsession.TrainingSessionConfigurator;
  
 public class TabsPagerAdapter extends FragmentPagerAdapter {
  
-    public TabsPagerAdapter(FragmentManager fm) {
+    private TrainingSessionConfigurator configurator;
+
+	public TabsPagerAdapter(FragmentManager fm, TrainingSessionConfigurator configurator) {
         super(fm);
+		this.configurator = configurator;
     }
  
     @Override

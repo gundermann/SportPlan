@@ -38,6 +38,7 @@ public class TrainingSessionDataManagerImpl implements TrainingSessionDataManage
 	public long saveTrainingSession(TrainingSession trainingSession) throws Exception {
 		MasterListItem item = new MasterListItem();
 		item.setDate(trainingSession.getDate());
+		item.setStart(trainingSession.getStart());
 		return masterListItemDao.save(item);
 	}
 

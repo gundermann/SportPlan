@@ -22,4 +22,8 @@ public interface TrainingSession {
 
 	void addParticipiant(Person participiant);
 
+	void setStart(long time);
+	
+	long getStart();
+
 }

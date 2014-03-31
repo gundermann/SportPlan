@@ -18,6 +18,8 @@ public class TrainingSessionImpl implements TrainingSession {
 	
 	private List<Person> participants;
 
+	private long start;
+
 	@Override
 	public String toString() {
 		return "Trainingseinheit: " + getDate();
@@ -78,4 +80,15 @@ public class TrainingSessionImpl implements TrainingSession {
 		this.participants.add(participiant);
 	}
 
+	@Override
+	public void setStart(long time) {
+		this.start = time;
+	}
+
+	@Override
+	public long getStart() {
+		return start;
+	}
+
+	
 }
