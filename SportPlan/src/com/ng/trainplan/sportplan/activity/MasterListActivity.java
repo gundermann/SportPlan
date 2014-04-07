@@ -10,14 +10,13 @@ import android.view.MenuItem;
 import com.ng.trainplan.sportplan.R;
 import com.ng.trainplan.sportplan.activity.fragment.AbstractListFragment;
 import com.ng.trainplan.sportplan.activity.fragment.ItemDetailFragment;
-import com.ng.trainplan.sportplan.activity.fragment.ItemListFragment;
+import com.ng.trainplan.sportplan.activity.fragment.MasterListFragment;
 import com.ng.trainplan.sportplan.business.MasterListCallbacks;
 import com.ng.trainplan.sportplan.trainingsession.TrainingSessionConfigurator;
 import com.ng.trainplan.sportplan.trainingsession.business.TrainingSession;
 import com.ng.trainplan.sportplan.trainingsession.business.TrainingSessionOrganizer;
 import com.ng.trainplan.sportplan.trainingsession.business.TrainingTargetOrganizer;
-import com.ng.trainplan.sportplan.trainingsession.ui.TrainingSessionDetailActivity;
-import com.ng.trainplan.sportplan.trainingsession.ui.TrainingSessionDetailFragment;
+import com.ng.trainplan.sportplan.trainingsession.ui.ParticipantListFragment;
 
 public class MasterListActivity extends AbstractActivity implements
 		MasterListCallbacks, TrainingTargetOrganizer, TrainingSessionOrganizer {
@@ -31,7 +30,7 @@ public class MasterListActivity extends AbstractActivity implements
 		if (findViewById(R.id.item_detail_container) != null) {
 			// only in the large-screen layouts
 			mTwoPane = true;
-			((ItemListFragment) getSpecificFragment())
+			((MasterListFragment) getSpecificFragment())
 					.setActivateOnItemClick(true);
 		}
 	}
@@ -59,7 +58,7 @@ public class MasterListActivity extends AbstractActivity implements
 	}
 
 	/**
-	 * Callback method from {@link ItemListFragment.MasterListCallbacks}
+	 * Callback method from {@link MasterListFragment.MasterListCallbacks}
 	 * indicating that the item with the given ID was selected.
 	 */
 	@Override
@@ -73,9 +72,9 @@ public class MasterListActivity extends AbstractActivity implements
 			Bundle arguments = new Bundle();
 			arguments.putString(ItemDetailFragment.ARG_ITEM_ID, id);
 //			if (id.equals("0")) {
-				fragment = new TrainingSessionDetailFragment();
+				fragment = new ParticipantListFragment();
 //			} else {
-				fragment = new ItemDetailFragment();
+//				fragment = new ItemDetailFragment();
 //			}
 			fragment.setArguments(arguments);
 			getSupportFragmentManager().beginTransaction()
@@ -85,12 +84,12 @@ public class MasterListActivity extends AbstractActivity implements
 			// In single-pane mode, simply start the detail activity
 			// for the selected item ID.
 			Intent detailIntent;
-			if (id.equals("0")) {
+//			if (id.equals("0")) {
 				detailIntent = new Intent(this,
-						TrainingSessionDetailActivity.class);
-			} else {
-				detailIntent = new Intent(this, ItemDetailActivity.class);
-			}
+						ParticipantListActivity.class);
+//			} else {
+//				detailIntent = new Intent(this, ItemDetailActivity.class);
+//			}
 			detailIntent.putExtra(ItemDetailFragment.ARG_ITEM_ID, id);
 			startActivity(detailIntent);
 		}

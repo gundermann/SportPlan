@@ -1,23 +1,21 @@
 package com.ng.trainplan.sportplan.business;
 
-
-import com.ng.trainplan.sportplan.person.business.PersonSetupListener;
-
 import android.content.DialogInterface;
 import android.content.DialogInterface.OnClickListener;
 
-public class CancelDialogListener implements OnClickListener {
-	
-	private PersonSetupListener setup;
+import com.ng.trainplan.sportplan.person.business.PersonSetupListener;
 
-	public CancelDialogListener(PersonSetupListener setup) {
-		this.setup = setup;
+public class CancelDialogListener implements OnClickListener {
+
+	private PersonSetupListener personSetupListener;
+
+	public CancelDialogListener(PersonSetupListener personSetupListener) {
+		this.personSetupListener = personSetupListener;
 	}
 
 	@Override
-	public void onClick(DialogInterface dialog, int which) {
-		dialog.dismiss();
-		setup.doFinishPersonSetup();
+	public void onClick(DialogInterface dialog, int arg1) {
+		personSetupListener.doFinishPersonSetup();
 	}
 
 }

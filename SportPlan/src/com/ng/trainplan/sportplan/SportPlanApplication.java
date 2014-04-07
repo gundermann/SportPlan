@@ -68,12 +68,12 @@ public class SportPlanApplication extends Application {
 	}
 
 	public void addPerson(Person person) {
-		pDbHelper.savePerson(person);
+		getPersonDBHelper().savePerson(person);
 	}
 
 	public void saveTrainingSession(TrainingSession trainingSession) {
 		try {
-			tsDbHelper.saveTrainingSession(trainingSession);
+			getTrainigSessionDBHelper().saveTrainingSession(trainingSession);
 		} catch (Exception e) {
 			Log.e("TRAININGSESSION", e.getMessage());
 		}

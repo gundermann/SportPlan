@@ -19,7 +19,7 @@ import com.ng.trainplan.sportplan.business.MasterListItem;
  * Activities containing this fragment MUST implement the
  * {@link MasterListCallbacks} interface.
  */
-public class ItemListFragment extends AbstractListFragment {
+public class MasterListFragment extends AbstractListFragment {
 
 	/**
 	 * The fragment's current callback object, which is notified of list item
@@ -31,7 +31,7 @@ public class ItemListFragment extends AbstractListFragment {
 	 * Mandatory empty constructor for the fragment manager to instantiate the
 	 * fragment (e.g. upon screen orientation changes).
 	 */
-	public ItemListFragment() {
+	public MasterListFragment() {
 	}
 
 	@Override
@@ -70,6 +70,7 @@ public class ItemListFragment extends AbstractListFragment {
 	protected ListAdapter getSpecificListAdapter() {
 		return new ArrayAdapter<MasterListItem>(getActivity(),
 				android.R.layout.simple_list_item_activated_1,
-				android.R.id.text1, ((SportPlanApplication) getActivity().getApplication()).getMasterList());
+				android.R.id.text1, ((SportPlanApplication) getActivity()
+						.getApplication()).getMasterList());
 	}
 }

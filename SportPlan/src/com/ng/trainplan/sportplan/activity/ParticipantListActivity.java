@@ -57,6 +57,6 @@ public class ParticipantListActivity extends AbstractDetailActivity {
 
 	@Override
 	protected Fragment getSpecificFragment() {
-		return new ParticipantListFragment();
+		return getSupportFragmentManager().findFragmentById(R.id.member_list);
 	}
 }

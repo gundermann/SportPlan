@@ -23,7 +23,7 @@
 
     <fragment
         android:id="@+id/item_list"
-        android:name="com.ng.trainplan.sportplan.activity.fragment.ItemListFragment"
+        android:name="com.ng.trainplan.sportplan.activity.fragment.MasterListFragment"
         android:layout_width="0dp"
         android:layout_height="match_parent"
         android:layout_weight="1"

@@ -54,7 +54,7 @@ public class MemberOverviewActivity extends AbstractDetailActivity implements Pe
 
 	@Override
 	protected int getContentView() {
-		return R.layout.activity_member_list;
+		return R.layout.activity_member_overview_list;
 	}
 
 	@Override
@@ -64,6 +64,7 @@ public class MemberOverviewActivity extends AbstractDetailActivity implements Pe
 
 	@Override
 	protected Fragment getSpecificFragment() {
-		return new MemberOverviewFragment();
+		return getSupportFragmentManager().findFragmentById(
+				R.id.member_overview_list);
 	}
 }

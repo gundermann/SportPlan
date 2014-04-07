@@ -14,7 +14,7 @@ public class TimePickerFragment extends Fragment {
 
 	private TrainingSessionConfigurator configurator;
 
-	public TimePickerFragment newInstance(TrainingSessionConfigurator configurator) {
+	public static TimePickerFragment newInstance(TrainingSessionConfigurator configurator) {
 		TimePickerFragment fragment = new TimePickerFragment();
 		fragment.configurator = configurator;
 		return fragment;

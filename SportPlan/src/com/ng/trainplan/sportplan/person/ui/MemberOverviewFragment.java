@@ -2,10 +2,11 @@ package com.ng.trainplan.sportplan.person.ui;
 
 import java.util.List;
 
+import android.widget.ListAdapter;
+
 import com.ng.trainplan.sportplan.activity.fragment.AbstractListFragment;
 import com.ng.trainplan.sportplan.person.Person;
-
-import android.widget.ListAdapter;
+import com.ng.trainplan.sportplan.trainingsession.ui.ParticipantListFragment;
 
 
 public class MemberOverviewFragment extends AbstractListFragment {

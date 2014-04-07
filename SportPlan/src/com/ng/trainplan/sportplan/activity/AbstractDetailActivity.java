@@ -38,9 +38,11 @@ public abstract class AbstractDetailActivity extends AbstractActivity {
 			arguments.putString(AbstractFragment.ARG_ITEM_ID, getIntent()
 					.getStringExtra(AbstractFragment.ARG_ITEM_ID));
 			fragment = getSpecificFragment();
-			fragment.setArguments(arguments);
-			getSupportFragmentManager().beginTransaction()
-					.add(getDetailContainer(), fragment).commit();
+			if (fragment.isDetached()) {
+				fragment.setArguments(arguments);
+				getSupportFragmentManager().beginTransaction()
+						.add(getDetailContainer(), fragment).commit();
+			}
 		}
 	}
 

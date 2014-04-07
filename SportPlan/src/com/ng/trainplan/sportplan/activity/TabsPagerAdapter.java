@@ -21,9 +21,9 @@ public class TabsPagerAdapter extends FragmentPagerAdapter {
  
         switch (index) {
         case 0:
-            return new DatePickerFragment();
+            return DatePickerFragment.newInstance(configurator);
         default:
-            return new TimePickerFragment();
+            return TimePickerFragment.newInstance(configurator);
         }
     }
  

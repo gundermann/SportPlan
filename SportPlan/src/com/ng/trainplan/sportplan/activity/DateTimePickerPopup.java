@@ -23,7 +23,6 @@ public class DateTimePickerPopup extends FragmentActivity implements TabListener
 	private TabsPagerAdapter mAdapter;
 	private ActionBar actionBar;
 	private String[] tabs = { "Datum", "Uhrzeit" };
-	private Button cancelBt;
 	private Button okBt;
 	private static TrainingSessionConfigurator configurator;
 
@@ -50,8 +49,6 @@ public class DateTimePickerPopup extends FragmentActivity implements TabListener
 		viewPager.setOnPageChangeListener(new PageChangeListener(actionBar));
 		actionBar.setHomeButtonEnabled(false);
 		actionBar.setNavigationMode(ActionBar.NAVIGATION_MODE_TABS);
-		cancelBt = (Button) findViewById(R.id.btCancel);
-		cancelBt.setOnClickListener(new CancelClickListener(this));
 		okBt = (Button) findViewById(R.id.btOk);
 		okBt.setOnClickListener(new SetupTrainingSessionClickListener(configurator, this));
 		// Adding Tabs
@@ -95,5 +92,9 @@ public class DateTimePickerPopup extends FragmentActivity implements TabListener
 	public void close() {
 		finish();
 	}
-
+	
+	@Override
+	public void onBackPressed() {
+		close();
+	}
 }
